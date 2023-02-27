@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nome = prompt('Qual o seu nome?')
+        document.write(`Olá, <strong>${nome}</strong>! Seu nome tem ${nome.length} letras!</br>`)
+        //<strong>${nome}</strong> deixa em Negrito.
+        //</br> quebra a linha.
+        //${nome.length} conta o tamanho da palavra.
+        document.write(`Seu nome em maiúculas é ${nome.toUpperCase()}.</br>`)
+        //toUpperCase() coloca em maiúculo.
+        document.write(`Seu nome em maiúculas é ${nome.toLowerCase()}.</br></br>`)
+        //toLowerCase() coloca em minúsculo.
+    </script>
+    <h1>Valores:</h1>
+    <script>
+        //var n1 = 15.5
+        var n1 = prompt('Quanto você ganha em real?')
+        document.write(`Você ganha ${n1} reais.` + '</br>') + (n1.toLocaleString('pt-BR',{style:'currency',currency:'BRL'}) + '</br>')
+        
+    </script>
+    
+</body>
+</html>

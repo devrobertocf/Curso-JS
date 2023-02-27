@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#area {
+            font: normal 20 pt Arial;
+            background: rgb(10, 10, 10);
+            color: rgb(247, 243, 243);
+            width: 200px; /*Largura*/
+            height: 200px; /*Altura*/
+            line-height: 200px; /*Centraliza o texto 'Interaja'*/
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area"onclick="Clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Interaja...
+    </div>
+<!--onclick="Clicar() quando clica muda-->
+<!--onmouseenter="entrar()" onmouseout="sair()" quando só coloca ou tira o mouse-->
+    <script>
+        var a = document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+// A mesma função na body pode ser feita aqui com essa adição de eventos no script.
+// Se tirar o código aqui embaixo ou em cima a função permanece.
+        function clicar() {
+            a.innerText = 'Clicou!'
+            a.style.background = 'red'
+        } //Function permite a interação do usuário.
+        function entrar() {
+            a.innerText = 'Entrou!'
+            a.style.background = 'blue'
+        }
+        function sair() {
+            a.innerText = 'Saiu!'
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+</html>

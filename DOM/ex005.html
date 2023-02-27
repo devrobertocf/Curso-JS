@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>primeiros passos com dom</title>
+    <style>
+body {
+    background-color: rgba(15, 15, 15, 0.932);
+    color: white;
+    front: normal 20pt Calibre
+
+}
+
+    </style>
+</head>
+<body>
+    <h1> Iniciando estudos com dom </h1>
+    <p> Aqui está o <strong> resultado </strong>. </p>
+    <p class="msg"> Aprendendo a usar o <strong> DOM </strong> no Javascript.</p>
+    <!--<p class="msg"> permite o uso do DOM pelo <div>.-->
+    <div class="msg">Clique Aqui!</div> <!--Faz o link do DOM.-->
+    <script>
+        var p1 = document.getElementsByTagName('p')[1] //O [0 ou 1] escolhe qual
+        //parágrafo será copiado.
+        document.write(p1.innerText)
+        //Copia o conteúdo do paragrafo 1, representado por 0, ou o dois se 1...
+        var d = document.querySelector('div.msg') //Muda a cor no JS.
+        d.style.color = 'blue' //Muda a cor no JS.
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        body {
+            font: normal 20 pt Arial;
+        }
+        input {
+            font: normal 18 pt Arial;
+            width: 100px;
+            /*Tamanho dos retângulos*/
+        }
+        div#res {
+            margin-top: 10px; 
+            /*Distancia o que vem embaixo*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <!--input: Inserir os retângulos... o name e o id permite o uso do DOM, pode 
+    deixar só um dos dois, é uma referência para o JS-->
+    <input type="number" name="txtn2" id="txtn2">
+    <!--Definir o tipo como nº impossibilita que escreva letras.-->
+    <input type="button" value="Somar" onclick="somar()">
+    <!--Inserir o botão do click, onclick dá a função para o botão, precisa do ()-->
+    <div id="res">Resultado</div>
+    <!--Função DOM de referência com o DIV-->
+    <script>
+        function somar() {
+            var tn1 = document.getElementById('txtn1')
+            var tn2 = document.querySelector('input#txtn2')
+            var res = document.getElementById('res')
+            var n1 = Number(tn1.value) //Cria as variantes para o texto.
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${s}.`
+        }
+    </script>
+
+</body>
+</html>
